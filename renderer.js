@@ -40,7 +40,7 @@ function drawTicks() {
   ctx.save();
   ctx.translate(centerX, centerY);
 
-  for (let i = 0; i < 60; i++) {
+  for (let i = 1; i <= 60; i++) {
     ctx.beginPath();
     ctx.rotate((2 * Math.PI) / 60);
     ctx.moveTo(0, -radius);
