@@ -10,9 +10,12 @@ A simple Electron-based timer application with a 60-minute visual countdown, dra
 - **Sound Notification**: Plays a sound when the timer reaches zero.
 - **Rounded Corners**: Frameless window with transparent background and rounded corners for a sleek look.
 
-## Installation
+## Installation (for Mac)
 
 1. **Clone the Repository**:
 
    ```bash
    git clone https://github.com/genp/time-timer-electron.git
+   cd time-timer-electron
+   npm run package
+   open release-builds/time-timer-electron-darwin-x64/time-timer-electron.app
