@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Time Timer</title>
+    <style>
+      body { font-family: sans-serif; text-align: center; padding: 1em; background: #fafafa; }
+      canvas { margin: 1em auto; display: block; background: #fff; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+      button { margin: 0.5em; padding: 0.5em 1em; border-radius: 8px; border: none; background: #555; color: white; cursor: pointer; }
+      button:hover { background: #333; }
+      input[type="color"] { margin-left: 0.5em; }
+    </style>
+  </head>
+  <body>
+    <h1>Time Timer</h1>
+    <canvas id="timerCanvas" width="300" height="300"></canvas>
+    <div>
+      <label>Timer Color: <input type="color" id="colorPicker" value="#ff5555"></label>
+    </div>
+    <div>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+    <audio id="ding" src="ding.mp3" preload="auto"></audio>
+    <script src="renderer.js"></script>
+  </body>
+  </html>
