@@ -1,16 +1,16 @@
 {
-    "name": "time-timer-electron",
-      "version": "1.0.0",
-    "icon": "clock_icon.png",,\n  "icon": "clock_icon.png",
-    "main": "main.js",
-    "scripts": {
-      "start": "electron .",
-      "package": "npm run package:mac:arm64",
-      "package:mac:arm64": "electron-packager . TimeTimer --overwrite --platform=darwin --arch=arm64 --app-bundle-id=com.local.timetimer --app-category-type=public.app-category.productivity --prune=true --out=release-builds && codesign --force --deep --sign - release-builds/TimeTimer-darwin-arm64/TimeTimer.app",
-      "package:mac:universal": "electron-packager . TimeTimer --overwrite --platform=darwin --arch=universal --app-bundle-id=com.local.timetimer --app-category-type=public.app-category.productivity --prune=true --out=release-builds && codesign --force --deep --sign - release-builds/TimeTimer-darwin-universal/TimeTimer.app"
-    },
-    "devDependencies": {
-      "electron": "^41.2.1",
-      "electron-packager": "^17.1.1"
-    }
+  "name": "time-timer-electron",
+  "version": "1.0.0",
+  "icon": "clock_icon.png",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "npm run package:mac:arm64",
+    "package:mac:arm64": "electron-packager . TimeTimer --overwrite --platform=darwin --arch=arm64 --icon=clock_icon.icns --app-bundle-id=com.local.timetimer --app-category-type=public.app-category.productivity --prune=true --out=release-builds && codesign --force --deep --sign - release-builds/TimeTimer-darwin-arm64/TimeTimer.app",
+    "package:mac:universal": "electron-packager . TimeTimer --overwrite --platform=darwin --arch=universal --icon=clock_icon.icns --app-bundle-id=com.local.timetimer --app-category-type=public.app-category.productivity --prune=true --out=release-builds && codesign --force --deep --sign - release-builds/TimeTimer-darwin-universal/TimeTimer.app"
+  },
+  "devDependencies": {
+    "electron": "^41.2.1",
+    "electron-packager": "^17.1.1"
   }
+}
