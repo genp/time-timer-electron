@@ -1,21 +1,32 @@
 # Time Timer Electron App
 
-A simple Electron-based timer application with a 60-minute visual countdown, draggable handle with snapping, and customizable color.
+A personal macOS timer inspired by the physical Time Timer: drag the red disk to set up to 60 minutes, start it, and let it keep counting while you work in other apps.
 
 ## Features
 
-- **60-Minute Timer Dial**: Always displays a full 60-minute circle with minute and five-minute tick marks.
-- **Drag-to-Set with Snapping**: Adjust the timer by dragging the handle, which snaps to minute marks for precision.
-- **Customizable Timer Color**: Choose your preferred color for the timer display.
-- **Sound Notification**: Plays a sound when the timer reaches zero.
-- **Rounded Corners**: Frameless window with transparent background and rounded corners for a sleek look.
+- 60-minute analog countdown dial with five-minute labels and minute ticks.
+- Wall-clock countdown logic, so elapsed time stays accurate if renderer callbacks are delayed.
+- Electron renderer background throttling disabled for the timer window.
+- Apple Silicon package script for local macOS builds.
+- Ad-hoc signing for the packaged `.app`, suitable for local personal use.
+- Custom disk color and completion sound.
 
-## Installation (for Mac)
+## Development
 
-1. **Clone the Repository**:
+```bash
+npm install
+npm start
+```
 
-   ```bash
-   git clone https://github.com/genp/time-timer-electron.git
-   cd time-timer-electron
-   npm run package
-   open release-builds/time-timer-electron-darwin-x64/time-timer-electron.app
+This repo targets Electron 41 for current Apple Silicon macOS. If `npm start` aborts immediately with the old installed Electron 27 runtime, refresh dependencies first:
+
+```bash
+npm install
+```
+
+## Package For This Mac
+
+```bash
+npm run package
+open release-builds/TimeTimer-darwin-arm64/TimeTimer.app
+```
